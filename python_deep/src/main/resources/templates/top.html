@@ -49,6 +49,17 @@
                 </ul>
             </li>
 
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">와인딥러닝<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#" onclick="subwine()">와인 종류 학습 및 결과 저장</a>
+                    </li>
+                    <li>
+                        <a href="wineview">손실률과 정확도 보기</a>
+                    </li>
+                </ul>
+            </li>
+
             <form id="hiddenForm" action="/iris" method="get" style="display:none;">
                 <input type="number" name="epoch" id="irisEpochInput" />
                 <input type="number" name="a" id="aInput" />
@@ -66,6 +77,13 @@
                 <input type="number" name="ff" id="ffInput" />
                 <input type="number" name="gg" id="ggInput" />
                 <input type="number" name="hh" id="hhInput" />
+            </form>
+            <form id="hiddenForm3" action="/wine" method="get" style="display:none;">
+                <input type="number" name="epoch3" id="wineEpochInput" />
+                <input type="number" name="i" id="iInput" />
+                <input type="number" name="j" id="jInput" />
+                <input type="number" name="k" id="kInput" />
+                <input type="number" name="l" id="lInput" />
             </form>
 
             <script>
@@ -97,9 +115,19 @@
                     document.getElementById("ffInput").value = prompt("bmi값을 입력하세요");
                     document.getElementById("ggInput").value = prompt("유전율을 입력하세요");
                     document.getElementById("hhInput").value = prompt("나이를 입력하세요");
-
                     document.getElementById("hiddenForm2").submit(); // hiddenForm2 제출
                 }
+
+                function subwine() {
+                    const num3 = prompt("학습할 횟수를 입력하세요");
+                    if (!num3) return;
+                    document.getElementById("diabetesEpochInput").value = num3;
+                    document.getElementById("iInput").value = prompt("이산화황 값을 입력하세요");
+                    document.getElementById("jInput").value = prompt("휘발성 산도 값을 입력하세요");
+                    document.getElementById("kInput").value = prompt("염화물 값을 입력하세요");
+                    document.getElementById("lInput").value = prompt("황산염 값을 입력하세요");
+                    document.getElementById("hiddenForm3").submit(); // hiddenForm3 제출
+
             </script>
 
         </ul>

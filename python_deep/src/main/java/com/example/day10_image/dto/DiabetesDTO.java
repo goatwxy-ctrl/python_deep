@@ -1,5 +1,4 @@
 package com.example.day10_image.dto;
-
 import com.example.day10_image.entity.DiabetesEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;

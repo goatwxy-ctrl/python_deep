@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="~{top::menu}"></div>
+<body>
+<div class="container">
+    <h2>와인종류 학습 손실률과 정확도</h2>
+    <table class="table table-stripe">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>손실률</th>
+            <th>정확도</th>
+            <th>반복횟수</th>
+            <th>와인종류</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item: ${list}">
+            <td th:text="${item.num3}"></td>
+            <td th:text="${item.loss3}"></td>
+            <td th:text="${item.accuracy3}"></td>
+            <td th:text="${item.epochs3}"></td>
+            <td th:text="${item.name3}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+</html>
