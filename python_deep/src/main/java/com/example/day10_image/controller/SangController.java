@@ -59,8 +59,6 @@ public class SangController {
 
         /// 이미지 폴더에 저장
         mf.transferTo(new File(path + "\\" + fname));
-
-
         return "redirect:/";
     }
 

@@ -31,7 +31,7 @@ public class WineController {
     ) throws IOException {
         if (epoch3 > 0) {
             ProcessBuilder processBuilder = new ProcessBuilder("python",
-                    "C:/sundo/AIpython/day6_wine_m/wine_springboot.py",
+                    "C:/sundo/AIpython/day6_wine_m/wine2.py",
                     String.valueOf(epoch3),
                     String.valueOf(i),
                     String.valueOf(j),
